@@ -34,7 +34,11 @@ function selectColor(){
 
 // Fill all uncolored cells
 function fillU(){
-    alert("Clicked Fill All Uncolored"); // Replace this line with your code.
+    table = document.getElementById("grid").querySelectorAll("td");
+    for (let i = 0; i < table.length; i++) {
+        if (table[i].style.background === "")
+            table[i].style.background = colorSelected;
+    }
 }
 
 // Fill all cells
