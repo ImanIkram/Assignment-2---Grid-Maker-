@@ -26,7 +26,10 @@ function removeC() {
 // Set global variable for selected color
 function selectColor(){
     colorSelected = document.getElementById("selectedColorId").value;
-    console.log(colorSelected);
+    document.getElementById("grid").addEventListener("click", function(e){
+        if(e.target.tagName == "TD")
+            e.target.style.background = colorSelected;
+    });
 }
 
 // Fill all uncolored cells
