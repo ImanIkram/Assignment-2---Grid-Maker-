@@ -43,10 +43,16 @@ function fillU(){
 
 // Fill all cells
 function fillAll(){
-    alert("Clicked Fill All"); // Replace this line with your code.
+    let cells = document.getElementById("grid").querySelectorAll("td");
+    for (let i = 0; i < cells.length; i++) {
+        cells[i].style.background = colorSelected;
+    }
 }
 
 // Clear all cells
 function clearAll(){
-    alert("Clicked Clear All"); // Replace this line with your code.
+    let cells = document.getElementById("grid").querySelectorAll("td");
+    for (let i = 0; i < cells.length; i++) {
+        cells[i].style.background = "";
+    }
 }
