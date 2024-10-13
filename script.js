@@ -3,15 +3,57 @@ let numRows = 0;
 let numCols = 0;
 let colorSelected; 
 
+function selectColor() {
+    const colorSelect = document.getElementById("selectedColorId");
+    colorSelected = colorSelect.value; 
+    console.log("Selected color:", colorSelected); 
+}
+
 // Add a row
 function addR() {
-    alert("Clicked Add Row"); // Replace this line with your code.
+    const table = document.getElementById("grid");
+    const newRow = document.createElement("tr");
+    
+   
+    let columns; 
+
+    if (table.rows.length > 0) {
+    columns = table.rows[0].cells.length; 
+    } else {
+    columns = 1; 
+    }
+
+    for (let i = 0; i < columns; i++) {
+        const newCell = document.createElement("td");
+        newCell.onclick = function() { this.style.backgroundColor = colorSelected; }; 
+        newRow.appendChild(newCell);
+    }
+
+    table.appendChild(newRow);
 }
 
 // Add a column
 function addC() {
-    alert("Clicked Add Col"); // Replace this line with your code.
+    console.log("Add Column button clicked");
+    const table = document.getElementById("grid");
+
+    if (table.rows.length === 0) {
+        const Row = document.createElement("tr"); 
+        const Cell = document.createElement("td"); 
+        newCell.onclick = function() { this.style.backgroundColor = colorSelected; };
+        newRow.appendChild(Cell);
+        table.appendChild(Row); 
+    }
+
+    for (let row of table.rows) {
+        const cell = document.createElement("td");
+        cell.onclick = function() { this.style.backgroundColor = colorSelected; };
+        row.appendChild(cell); // Use 'row' directly here
+    }
+
+
 }
+
 
 // Remove a row
 function removeR() {
