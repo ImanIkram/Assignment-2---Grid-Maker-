@@ -11,7 +11,6 @@ function selectColor() {
 
 // Add a row
 function addR() {
-    console.log("Add Row button clicked");
     const table = document.getElementById("grid");
     const newRow = document.createElement("tr");
     
@@ -32,15 +31,11 @@ function addR() {
     }
     table.appendChild(newRow);
     numRows++;
-    console.log("rows: ", numRows);
-    console.log("cols: ", numCols);
-    console.log("length: ", table.rows.length);
 }
 
 
 // Add a column
 function addC() {
-    console.log("Add Column button clicked");
     const table = document.getElementById("grid");
 
     if (table.rows.length == 0) {
@@ -59,18 +54,13 @@ function addC() {
     }
 }
     numCols++;
-    console.log("rows: ", numRows);
-    console.log("cols: ", numCols);
-    console.log("length: ", table.rows.length);
 }
 
 
 
 // Remove a row
 function removeR() {
-    console.log("Remove Row button clicked");
     const table = document.getElementById("grid");
-    var x= table.rows.length;
     if(numRows!=0)
     {
        table.deleteRow(-1);
@@ -80,17 +70,11 @@ function removeR() {
         numCols=0;
        }
     }
-    console.log("rows: ", numRows);
-    console.log("cols: ", numCols)
-    console.log("length: ", table.rows.length);
 }
 
 // Remove a column
-// const row=document.getElementById("tr");
 function removeC() {
-    console.log("Remove Col button clicked");
     const table = document.getElementById("grid");
-
     var x= table.rows.length;
     if(numCols!=0)
     {
@@ -107,9 +91,6 @@ function removeC() {
         numRows=0;
     }
     }
-    console.log("rows: ", numRows);
-    console.log("cols: ", numCols);
-    console.log("length: ", table.rows.length);
 }
 
 // Set global variable for selected color
