@@ -1,4 +1,6 @@
 # grid-maker-starter-code
+Team Members (and GitHub Usernames): Anita Prova (anitaprova), Iman Ikram (ImanIkram), Tesneem Essa (TesneemE), Stephanie Njoku (stephxsb)
+
 This repository is the starter code for Assignment 2 - Grid Maker.
 
 ### Live Link
